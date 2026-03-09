@@ -183,6 +183,8 @@ a {
     z-index: 1;
     max-width: 720px;
     animation: fadeUp 0.9s ease forwards;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-badge {
@@ -213,6 +215,7 @@ a {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 2rem 0;
+    justify-content: center;
 }
 
 .hero-meta {
@@ -288,7 +291,7 @@ a {
     height: 380px;
     border-radius: 32px;
     background-image: linear-gradient(135deg, rgba(255, 122, 24, 0.2), rgba(0, 194, 255, 0.25)),
-        url("../Resimler/WhatsApp%20Image%202026-03-07%20at%2020.32.18.jpeg");
+        url("../Resimler/danfoss.jpeg");
     background-size: cover;
     background-position: center;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
@@ -504,6 +507,122 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Contact Form Styles */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .form-label {
+    color: var(--light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: var(--light);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 122, 24, 0.25);
+    color: var(--light);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--muted);
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    color: #101425;
+    font-size: 1.2rem;
+}
+
+.contact-details h5 {
+    color: var(--light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    color: var(--light);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.contact-details small {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* Quick Contact */
+.quick-contact .btn {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+}
+
+/* Step Numbers */
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #101425;
+    margin: 0 auto;
+}
+
+/* Service Icon Enhancement */
+.service-icon {
+    text-align: center;
+}
+
+/* Active Navigation Link */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
 }
 
 /* Responsive */
