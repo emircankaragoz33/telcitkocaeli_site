@@ -184,7 +184,7 @@ a {
 
 /* Hero */
 .hero {
-    padding: 160px 0 120px;
+    padding: 60px 0 100px;
     position: relative;
     background-color: var(--dark);
     background-image:
@@ -657,7 +657,7 @@ a {
 /* Responsive */
 @media (max-width: 991px) {
     .hero {
-        padding: 140px 0 100px;
+        padding: 40px 0 80px;
     }
 
     .gallery-header {
