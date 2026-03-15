@@ -16,6 +16,24 @@
     new WOW().init();
 
 
+    // Top contact marquee (shared across pages)
+    if ($('.nav-bar').length && $('.top-contact-bar').length === 0) {
+        var topContactBar = '' +
+            '<div class="top-contact-bar">' +
+            '<marquee behavior="scroll" direction="left" scrollamount="5">' +
+            '<i class="fas fa-phone-alt me-1"></i> 0 542 415 95 62 &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ' +
+            '<i class="fas fa-envelope me-1"></i> info@guclucit.com &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ' +
+            '<i class="fas fa-phone-alt me-1"></i> 0 542 415 95 62 &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ' +
+            '<i class="fas fa-envelope me-1"></i> info@guclucit.com &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ' +
+            '<i class="fas fa-phone-alt me-1"></i> 0 542 415 95 62 &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ' +
+            '<i class="fas fa-envelope me-1"></i> info@guclucit.com' +
+            '</marquee>' +
+            '</div>';
+
+        $('.nav-bar').first().before(topContactBar);
+    }
+
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 45) {

@@ -35,33 +35,33 @@ h4 {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-size: clamp(3rem, 6vw, 5rem);
     line-height: 1.1;
     font-weight: 700;
     font-family: "Space Grotesk", sans-serif;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
     line-height: 1.2;
     font-family: "Space Grotesk", sans-serif;
 }
 
 h3 {
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
     line-height: 1.3;
     font-weight: 600;
     font-family: "Space Grotesk", sans-serif;
 }
 
 h4 {
-    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     line-height: 1.4;
     font-family: "Poppins", sans-serif;
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     font-weight: 400;
     color: var(--muted);
@@ -82,6 +82,24 @@ a {
 
 .site-wrapper {
     overflow: hidden;
+}
+
+.top-contact-bar {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-color: var(--primary);
+    color: #101425;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    white-space: nowrap;
+}
+
+.top-contact-bar marquee {
+    display: block;
+    width: 100%;
 }
 
 .container {
@@ -147,6 +165,19 @@ a {
 
 .navbar-brand {
     gap: 0.75rem;
+}
+
+.navbar-logo {
+    height: 52px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+    .navbar-logo {
+        height: 42px;
+    }
 }
 
 .brand-mark {
@@ -229,7 +260,7 @@ a {
 }
 
 .hero h1 {
-    font-size: clamp(2.8rem, 4vw, 4.6rem);
+    font-size: clamp(3.8rem, 6vw, 5.6rem);
     margin: 1.2rem 0;
 }
 
@@ -387,10 +418,10 @@ a {
 
 .gallery-grid .shot {
     width: 100%;
-    height: 320px;
+    height: 380px;
     object-fit: cover;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -413,13 +444,13 @@ a {
 }
 
 .gallery-item h4 {
-    padding: 1rem;
+    padding: 1.2rem;
     margin: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--light);
     text-align: center;
-    background: rgba(11, 15, 26, 0.6);
+    background: rgba(11, 15, 26, 0.8);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
