@@ -733,3 +733,120 @@ a {
         background-attachment: scroll;
     }
 }
+
+/* Reference Carousel Styles */
+.reference-showcase {
+    position: relative;
+    padding: 2rem;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 122, 24, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.reference-showcase::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 122, 24, 0.35), rgba(0, 194, 255, 0.18));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.reference-carousel {
+    position: relative;
+    z-index: 1;
+}
+
+.reference-carousel .owl-stage-outer {
+    padding-bottom: 0.25rem;
+}
+
+.reference-scroll-hint {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.reference-scroll-line {
+    width: 64px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255, 122, 24, 0.2), rgba(255, 122, 24, 0.95), rgba(0, 194, 255, 0.8));
+}
+
+.reference-scroll-label {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+}
+
+.reference-scroll-hint i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.reference-carousel .owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.reference-carousel .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.24);
+    transition: all 0.3s ease;
+}
+
+.reference-carousel .owl-dot.active span,
+.reference-carousel .owl-dot:hover span {
+    width: 28px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.reference-carousel .reference-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.reference-carousel .reference-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 122, 24, 0.3);
+}
+
+.reference-carousel .reference-item img {
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.reference-carousel .reference-item:hover img {
+    filter: grayscale(0%);
+}

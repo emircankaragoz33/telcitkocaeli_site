@@ -90,6 +90,34 @@
             }
         }
     });
+
+    // Reference logos carousel
+    $(".reference-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        smartSpeed: 800,
+        margin: 24,
+        dots: true,
+        loop: true,
+        nav: false,
+        responsive: {
+            0:{
+                items:2
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
     
 })(jQuery);
 
