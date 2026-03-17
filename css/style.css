@@ -850,3 +850,49 @@ a {
 .reference-carousel .reference-item:hover img {
     filter: grayscale(0%);
 }
+
+/* Fixed CTA Button - Bottom Right */
+.fixed-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(255, 122, 24, 0.4);
+    transition: all 0.3s ease;
+}
+
+.fixed-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(255, 122, 24, 0.5);
+    color: white;
+}
+
+.fixed-cta i {
+    font-size: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .fixed-cta {
+        padding: 12px 18px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Hide back-to-top button */
+.back-to-top {
+    display: none !important;
+}
