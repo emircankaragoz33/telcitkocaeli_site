@@ -30,22 +30,30 @@
     }
 
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.nav-bar').addClass('sticky-top');
-        } else {
-            $('.nav-bar').removeClass('sticky-top');
-        }
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
+    // Sticky Navbar + Back to top (single throttled handler)
+    var $navBar = $('.nav-bar');
+    var $backToTop = $('.back-to-top');
+    var ticking = false;
+
+    $(window).on('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 45) {
+                    $navBar.addClass('sticky-top');
+                } else {
+                    $navBar.removeClass('sticky-top');
+                }
+                if ($backToTop.length) {
+                    if (scrollTop > 300) {
+                        $backToTop.fadeIn('slow');
+                    } else {
+                        $backToTop.fadeOut('slow');
+                    }
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
     });
     $('.back-to-top').click(function () {
